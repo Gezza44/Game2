@@ -13,13 +13,7 @@
 	
 	setInterval(draw, 10);
 
-	var mouseX = 0;
-	var mouseY = 0;
-	canvas.addEventListener("mousemove", setMousePosition, false);
-	function setMousePosition(e) {
-	mouseX = e.clientX;
-	mouseY = e.clientY;
-	}       	
+	
 		
 		ctx.beginPath();
 		ctx.rect(MouseX, MouseY, 40, 50, 50);
@@ -50,7 +44,9 @@
 		ctx.closePath();
 	}
 		
-		
+	function draw () {
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+	}
 		
 		
 		//function draw() {
