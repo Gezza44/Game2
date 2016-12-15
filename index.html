@@ -4,9 +4,24 @@
 </head>
 
 <body>
-  <canvas id="myCanvas" width="720" height="480" style="border:1px solid #000000; cursor: none;">
-		</canvas>
-  <script src="script.js"></script>
+<canvas id="myCanvas" width="720" height="480" style="border:1px solid #000000; cursor: none;">
+</canvas>
+	<script>
+	var canvas = document.getElementById("myCanvas");
+	var ctx = canvas.getContext("2d");
+	ctx.beginPath();
+	ctx.rect(20, 40, 50, 50);
+	ctx.fillStyle = "#FF0000";
+	ctx.fill();
+	ctx.closePath();
+
+	ctx.beginPath();
+	ctx.arc(240, 160, 20, 0, Math.PI*2, false);
+	ctx.fillStyle = "green";
+	ctx.fill();
+	ctx.closePath();
+
+	</script>
 </body>
 
 </html> 
