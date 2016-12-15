@@ -33,6 +33,7 @@
 		ctx.rect(MouseX, MouseY, 40, 50, 50);
 		ctx.fillStyle = "#FF0000";
 		ctx.fill();
+		ctx.id="redrect"
 		ctx.closePath();
 	 }
 
@@ -42,11 +43,15 @@
 		ctx.fillStyle = "green";
 		ctx.fill();
 		ctx.closePath();
+	$("#redrect").mousemove(function(e){
+      $('.follow').css({'top': e.clientY - 20, 'left': e.clientX - 20});
+});
 	}
 		
 	function draw () {
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 	}
+		
 		
 		
 		//function draw() {
